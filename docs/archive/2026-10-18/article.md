@@ -66,6 +66,22 @@ The hash-verification command supplied before this update intentionally pins the
 
 Please triage the cloud-to-local save and verification experience, investigate whether local execution/handoff capabilities were missing or insufficiently discoverable, and provide an explanation and written corrective-action plan. The user requested a meeting with a responsible support or product representative; no meeting or response is promised by this report.
 
+### Requested written reply by Tuesday morning, October 20, 2026
+
+The user explicitly requested an answer in a reply to this bug report by Tuesday morning, October 20, 2026 (America/New_York): "why after all that I AM STILL NOT SEEING MY FILES under my personal control". This is the user's requested response deadline, not an accepted support commitment. No specific morning hour was supplied.
+
+The requested reply should explain:
+
+- Why repeated requests for files on the user's physical drive resulted in cloud commits, remote branch publication, and further manual commands without verified local delivery.
+- Why the deliverables were nested beneath `docs/archive/2026-10-18`, and why the assistant continued giving instructions without evidence that the user could see and open the files.
+- Which materials actually exist: the incident report labeled `article.md`, the prompt archive, and the text transcript; whether any separately intended article remains unidentified or missing.
+- What concrete steps will establish personal control: an explicit local path, readable files, verified content, and confirmation that the chosen storage is the user's intended drive.
+- Who owns the resolution and what changes will prevent this repeated handoff failure.
+
+Current evidence supports only a limited explanation: this thread's executable workspace is in the cloud; publication went to a separate GitHub branch; the local screenshot shows a top-level `docs` directory but not its contents; and no successful local download/hash-verification output has been received. These observations do not establish why any particular local command did or did not succeed, and they do not establish intentional obstruction.
+
+No support ticket number, confirmed delivery to OpenAI support, assigned responder, or commitment to reply by Tuesday has been obtained. Archiving this request on GitHub is not submission to a monitored support queue.
+
 ## Submission status
 
 Archived in the existing cloud Git checkout at the user's request. A GitHub API access check returned Forbidden, so no issue was submitted. No email-sending tool is available. An attempted push to a separate incident branch was rejected by automatic approval review because repository ownership/privacy and authorization for conversation-derived remote disclosure were not verified. After the user reiterated the request following disclosure of this limitation, a subsequent approved push successfully published the archive to caeled/remote-control-lab on branch incident/cloud-local-save-2026-10-18. This is archival publication, not delivery to OpenAI support. The Windows drive copy remains unverified.
