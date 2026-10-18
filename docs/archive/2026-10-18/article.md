@@ -31,6 +31,9 @@ The user's article text and title have not been supplied or identified in this t
 10. The user subsequently requested Markdown copies of the article, prompt, and transcript and a re-clone command. Commit `9d72f748274519c500bc0aafd5e73719775e5cbb` published three files. The transcript contains 39 user/assistant messages through that archival request, excluding tool logs, internal instructions, and image binaries. The prompt file includes original requests and historical clone instructions. The file named `article.md` contains this incident report, not an identified manuscript.
 11. The final re-clone handoff listed the downloaded Markdown files and opened their folder, but did not itself perform the earlier promised byte comparison. No resulting local command output has been received. A remote push, directory listing, and hash verification must remain distinct outcomes.
 12. The user requested this report update and disclosed the Tuesday writing deadline.
+13. The user subsequently reported that the files were still not visible on their drive. Their screenshot showed the existing Windows checkout's top-level listing, including a `docs` directory but no top-level article, prompt, or transcript. This proves that the directory exists, not that the requested Markdown files are present or absent beneath it. The assistant's nested archive layout and repeated Git instructions had not produced a clear, user-verifiable handoff.
+14. The assistant supplied another manual PowerShell block: fetch the incident branch, export the archive subtree from exact commit `d8a8157896aaf03a349a1bb44597ee7b18167936`, extract the three Markdown files directly into a new `YOUR-FILES-…` folder on D:, compare all three SHA-256 hashes with known cloud-file hashes, and open that folder in Explorer. This block was supplied to the user; its execution and results have not been observed. It preserves the existing checkout and does not require another clone.
+15. The user immediately requested another bug-report update. Local delivery remains unresolved pending actual local execution evidence, while the Tuesday writing deadline remains relevant.
 
 ## Expected behavior
 
@@ -42,6 +45,14 @@ The user's article text and title have not been supplied or identified in this t
 - Make the cloud-to-local capability boundary clear in the product and offer an accessible export or local execution handoff.
 - Identify the requested article before labeling another document as its archival copy; make any unresolved content request explicit.
 - Keep the final handoff consistent with promised verification, and prioritize a concise resolution when the user has a writing deadline.
+- Put requested deliverables in an obvious folder and open that exact folder; do not assume a user will discover files several directories below the repository root.
+- Treat repeated user reports of missing files as an unresolved delivery problem. Successful remote publication alone does not fulfill a request for files on a physical drive.
+
+## Latest delivery status
+
+The report, prompt, and conversation transcript were published remotely. The latest screenshot confirms only the local checkout's top-level `docs` directory. No successful local SHA-256 verification output or listing of all three requested Markdown files has been received. The assistant cannot directly execute commands on this Windows drive with the tools available in this thread. The latest PowerShell handoff is an unverified instruction, not a completed transfer. This limitation and the repeated manual burden should remain explicit in triage and any resolution claim.
+
+The hash-verification command supplied before this update intentionally pins the preceding archive commit, so its expected hashes remain valid. It retrieves that version of the incident report; it does not include this subsequent report update.
 
 ## Evidence and limits
 
